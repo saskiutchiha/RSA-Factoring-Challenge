@@ -1,13 +1,18 @@
 #!/usr/bin/python3
 from sys import argv
 def fined_print_devisor(a):
+ check = True
  for i in range(2,(a//2)+1):
    
    if a % i == 0:
      print("{:d}={:d}*{:d}".format(a,int(a/i),int(i)),end="")
+     check = False
      break
+ if check == True:
+      print("{:d}={:d}*{:d}".format(a,a,1),end="")
 a = argv
 f = open(a[1],"r")
+
 for i in f.readlines():
   
   if i[-1] == '\n':
@@ -15,5 +20,5 @@ for i in f.readlines():
   else :
     num = int(i) 
   fined_print_devisor(num)
-  
+ 
   print("")
