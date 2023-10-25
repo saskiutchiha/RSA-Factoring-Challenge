@@ -22,3 +22,4 @@ for i in f.readlines():
   fined_print_devisor(num)
  
   print("")
+  f.close()
